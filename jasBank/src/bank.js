@@ -1,10 +1,4 @@
 'use strict';
-class Account {
-  constructor(number_of_account) {
-    this.ACCOUNT_NUMBER = number_of_account;
-  };
-};
-
 class Bank {
   constructor() {
     this.accounts = [];
@@ -12,4 +6,8 @@ class Bank {
   createAccount(number_account) {
     this.accounts.push(new Account(number_account));
   };
+   all() {
+     let list = this.accounts.map(num => num.ACCOUNT_NUMBER);
+     list;
+   };
 };
