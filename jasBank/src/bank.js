@@ -1,2 +1,6 @@
 'use strict';
-class Bank {};
+class Bank {
+  constructor() {
+    this.accounts = [];
+  }
+};
