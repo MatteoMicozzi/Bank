@@ -5,7 +5,7 @@ This Bank application is written in javascript.
 
 **- Class diagram**
 
-![](./images/classDiagram.png)
+![](./images/bankClassDiagram.png)
 
 **- Project plan**
 

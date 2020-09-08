@@ -8,7 +8,7 @@ describe("Bank", function() {
   describe("#createAccount", function() {
     it("increase the number of accounts", function() {
       bank.createAccount("012345");
-      expect(bank.accounts.length()).toEqual(1);
+      expect(bank.accounts.length).toEqual(1);
     });
   });
 });
