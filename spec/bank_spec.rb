@@ -41,4 +41,13 @@ describe Bank do
       expect(account01.print_account_statement).to eq("date || credit || debit || balance\n01-09-2020 || 1000.00 || || 1000.00")
     end
   end
+  describe "#withdrawal" do
+    it "can withdrawal of 600.00 from the account" do
+      subject.create_account("012345")
+      account01 = subject.select("012345")
+      account01.deposit("01-09-2020", 1000.00)
+      account01.withdrawal("02-09-2020", 600.00)
+      expect(account01.print_account_statement).to eq("date || credit || debit || balance\n01-09-2020 || 1000.00 || || 1000.00\n02-09-2020 || || 600.00 || 400.00")
+    end
+  end
 end

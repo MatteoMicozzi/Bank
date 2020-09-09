@@ -5,7 +5,7 @@ This Bank application is written in ruby.
 
 **- Class diagram**
 
-![](./images/class_diagram.png)
+![](./images/bank_class_diagram.png)
 
 **- Project plan**
 

@@ -14,9 +14,14 @@ class Account
     number = (float - float.truncate) * 10                  # instead of .00 as required.
     (number - number.truncate) == 0 ? "#{float}0" : float   # (I didn't find any method for it)
   end
-  
-  def deposit(date, amount)                                                  # I decide to add as parameter
+
+  def deposit(date, amount)                                                  # I decide to add date as parameter
     @balance += amount                                                       # because of the acceptance criteria.
     @statement << "#{date} || #{digits(amount)} || || #{digits(@balance)}"   # Insteat to insert date I can use as well
-  end                                                                        # "#{Time.now.day}-#{Time.now.month}-#{Time.now.year}"
+  end                                                                        # t = Time.now => "#{t.day}-#{t.month}-#{t.year}"
+
+  def withdrawal(date, amount)
+    @balance -= amount
+    @statement << "#{date} || || #{digits(amount)} || #{digits(@balance)}"
+  end
 end
