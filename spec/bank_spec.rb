@@ -23,14 +23,14 @@ describe Bank do
     it "return the account selected by the number account" do
       subject.create_account("012345")
       account01 = subject.select("012345")
-      expect(account01.account_number).to eq("012345")     
+      expect(account01.account_number).to eq("012345")
     end
   end
-  # describe "#print_account_statement" do
-  #   it "return 'date || credit || debit || balance'" do
-  #     subject.create_account("012345")
-  #     account01 = subject.select("012345")
-  #     expect(account01.print_account_statement).to eq("date || credit || debit || balance")
-  #   end
-  # end
+  describe "#print_account_statement" do
+    it "return 'date || credit || debit || balance'" do
+      subject.create_account("012345")
+      account01 = subject.select("012345")
+      expect(account01.print_account_statement).to eq("date || credit || debit || balance")
+    end
+  end
 end
