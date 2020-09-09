@@ -60,6 +60,13 @@
       },
       "/Users/matteomicozzi/Projects/makers/week10/Bank/lib/account.rb": {
         "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           1,
           1,
           1,
@@ -106,7 +113,6 @@
           null,
           1,
           2,
-          3,
           2,
           null,
           null,
@@ -114,10 +120,11 @@
           4,
           4,
           null,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1599661430
+    "timestamp": 1599672658
   }
 }

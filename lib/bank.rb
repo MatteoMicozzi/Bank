@@ -12,13 +12,13 @@ class Bank
   end
 
   def all
-    list = @accounts.map { |account|
-      account.account_number }.join("\n")
-    return list
+    list = @accounts.map(&:account_number).join("\n")
+    list
   end
 
   def select(account_num)
-    @accounts.each { |selected|
-      return selected if selected.account_number == account_num }
+    @accounts.each do |selected|
+      return selected if selected.account_number == account_num
+    end
   end
 end
