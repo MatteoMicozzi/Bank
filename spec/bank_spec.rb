@@ -11,12 +11,12 @@ describe Bank do
   describe '#all' do
     it 'print the account number' do
       subject.create_account('012345')
-      expect(subject.all).to eq('012345')
+      expect(subject.list_accounts).to eq('012345')
     end
     it 'print multiple account numbers' do
       subject.create_account('12345')
       subject.create_account('67890')
-      expect(subject.all).to eq("12345\n67890")
+      expect(subject.list_accounts).to eq("12345\n67890")
     end
   end
   describe '#select' do

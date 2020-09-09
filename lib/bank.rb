@@ -11,7 +11,7 @@ class Bank
     @accounts << Account.new(account_number)
   end
 
-  def all
+  def list_accounts
     list = @accounts.map(&:account_number).join("\n")
     list
   end
