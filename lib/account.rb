@@ -5,9 +5,11 @@
 # t = Time.now
 # "#{t.day}-#{t.month}-#{t.year}"
 
+require 'require_all'
+require_all 'lib'
+
 class Account
-  attr_reader :account_number
-  def initialize(number_of_account)
+  def initialize
     @account_number = number_of_account
     @statement = ['date || credit || debit || balance']
     @balance = 0.0
