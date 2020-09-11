@@ -10,7 +10,6 @@ require_all 'lib'
 
 class Account
   def initialize
-    @account_number = number_of_account
     @statement = ['date || credit || debit || balance']
     @balance = 0.0
   end
