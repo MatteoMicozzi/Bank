@@ -4,6 +4,11 @@ require_all 'lib'
 class Bank
   def initialize(bank_number)
     @bank_number = "#{bank_number}"
+    @accounts = {}
+  end
+
+  def create_account(account_number, account = Account.new)
+    @accounts[:"#{account_number}"] = account
   end
 
   def bank_number
