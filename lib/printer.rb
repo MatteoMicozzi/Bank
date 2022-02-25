@@ -10,8 +10,13 @@ class Printer
   end
 
   def digits(float)
-    number = (float - float.truncate) * 10
-    (number - number.truncate).zero? ? "#{float}0" : float
+    if float.integer?
+      "#{float}.00"
+    elsif float.to_s.split('.').last.length == 1
+      "#{float}0"
+    else
+      "#{float.truncate(2)}"
+    end
   end
 
   def print(statement)
