@@ -7,11 +7,11 @@ class Bank
     @accounts = {}
   end
 
-  def create_account(account_number, account = Account.new)
-    @accounts[:"#{account_number}"] = account
-  end
-
   def bank_number
     @bank_number
+  end
+  
+  def create_account(account_number, account = Account.new)
+    @accounts[:"#{account_number}"] = account
   end
 end
