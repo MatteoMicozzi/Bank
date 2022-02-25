@@ -23,4 +23,9 @@ describe Printer do
       expect(subject.digits(100.1234)).to eq("100.12")
     end
   end
+  describe '#print' do
+    it 'will print with \n between statements for newline' do
+      expect(subject.print(['statement1', 'statement2', 'statement3'])).to eq("statement1\nstatement2\nstatement3")
+    end
+  end
 end
