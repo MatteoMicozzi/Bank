@@ -19,5 +19,8 @@ describe Printer do
     it 'will return the last float zero digit at the end' do
       expect(subject.digits(100.1)).to eq("100.10")
     end
+    it 'will return just the last 2 float digits at the end' do
+      expect(subject.digits(100.1234)).to eq("100.12")
+    end
   end
 end
