@@ -2,10 +2,12 @@ require 'require_all'
 require_all 'lib'
 
 describe Bank do
-  describe '#' do
-    it "will create a Bank object" do
-      bank01 = Bank.new(01)
-      expect(bank01.is_a? Bank).to eq(true)
+  describe '#bank_number' do
+    it "will print the bank number" do
+      bank01 = Bank.new('01')
+      bank10 = Bank.new(10)
+      expect(bank01.bank_number).to eq('01')
+      expect(bank10.bank_number).to eq('10')
     end
   end
   # describe '#' do
