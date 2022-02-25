@@ -13,5 +13,8 @@ describe Printer do
     it 'will return the same float number' do
       expect(subject.digits(100.01)).to eq("100.01")
     end
+    it 'will return the 2 float zeros digits at the end' do
+      expect(subject.digits(100)).to eq("100.00")
+    end
   end
 end
