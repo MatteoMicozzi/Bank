@@ -11,7 +11,12 @@ describe 'Errors' do
       expect { bank.all }.to raise_error(NoAccountError)
     end
   end
-  
+  describe 'Bank #create_account' do
+    it "raise an error if an invalid account number is entered" do
+      expect { bank.create_account(01) }.to raise_error(AccountNumberError)
+    end
+  end
+
   describe 'Account #money_availability' do
     it "raise an error if withdrawaled more than balance" do
       expect { account.withdrawal(1100.00) }.to raise_error(WithdrawalError)
