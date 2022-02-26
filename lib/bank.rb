@@ -23,11 +23,13 @@ class Bank
 
   def select_account(account_number)
     validation_number(account_number)
+    availability_account(@accounts, account_number)
     @accounts[account_number]
   end
 
   def delete_account(account_number)
     validation_number(account_number)
+    availability_account(@accounts, account_number)
     @accounts.delete(account_number)
   end
 end

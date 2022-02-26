@@ -16,6 +16,18 @@ describe 'Errors' do
       expect { bank.create_account(01) }.to raise_error(AccountNumberError)
     end
   end
+  describe 'Bank #select' do
+    it "raise an error if an invalid account number is entered and if isn't present" do
+      expect { bank.select_account(01) }.to raise_error(AccountNumberError)
+      expect { bank.select_account('10') }.to raise_error(UnavailableAccountError)
+    end
+  end
+  describe 'Bank #delete' do
+    it "raise an error if an invalid account number is entered and if isn't present" do
+      expect { bank.delete_account(01) }.to raise_error(AccountNumberError)
+      expect { bank.delete_account('10') }.to raise_error(UnavailableAccountError)
+    end
+  end
 
   describe 'Account #money_availability' do
     it "raise an error if withdrawaled more than balance" do
