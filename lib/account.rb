@@ -9,6 +9,7 @@ class Account
   end
 
   def deposit(amount)
+    validation_deposit(amount)
     @balance += amount
     @statement << "#{@printer.date} || #{@printer.digits(amount)} || || #{@printer.digits(@balance)}"
   end
