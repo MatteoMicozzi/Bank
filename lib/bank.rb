@@ -10,6 +10,7 @@ class Bank
   end
 
   def all
+    accounts_availability(@accounts)
     list = []
     @accounts.each { |number, object| list.push(number) }
     list.join('\n')
