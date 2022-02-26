@@ -14,6 +14,7 @@ class Account
   end
 
   def withdrawal(amount)
+    money_availability(@balance, amount)
     @balance -= amount
     @statement << "#{@printer.date} || || #{@printer.digits(amount)} || #{@printer.digits(@balance)}"
   end
