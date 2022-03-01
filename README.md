@@ -1,6 +1,7 @@
 # Bank
 
-This is a simulation of a bank project where a user that hold an account can: .deposit(), .withdrawal() and .print_statement_account.
+This is a simulation of a bank project where a Bank can print the list of all accounts available, an account can be created, selected and deleted.  
+A user that hold an Account can deposit, withdrawal and print the statement account.
 This Bank application is written in ruby.
 
 **- Class diagram**
