@@ -12,7 +12,7 @@ class Bank
   def all
     accounts_availability(@accounts)
     list = []
-    @accounts.each { |number, object| list.push(number) }
+    @accounts.each { |number, account| list.push(number) }
     list.join('\n')
   end
 
@@ -22,14 +22,12 @@ class Bank
   end
 
   def select_account(account_number)
-    validation_number(account_number)
-    availability_account(@accounts, account_number)
+    validation_account(@accounts, account_number)
     @accounts[account_number]
   end
 
   def delete_account(account_number)
-    validation_number(account_number)
-    availability_account(@accounts, account_number)
+    validation_account(@accounts, account_number)
     @accounts.delete(account_number)
   end
 end

@@ -18,6 +18,10 @@ end
 def availability_account(accounts, account_number)
   raise UnavailableAccountError, "No account available!" unless accounts.include?(account_number)
 end
+def validation_account(accounts, account_number)
+  validation_number(account_number)
+  availability_account(@accounts, account_number)
+end
 
 
 def money_availability(balance, amount)
